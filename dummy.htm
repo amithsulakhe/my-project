@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination</title>
+    <style>
+        #main {
+            width: 35%;
+            height: 690px;
+            border-radius: 1px;
+            margin-left: 33.5%;
+            margin-top: 1%;
+            box-shadow: 10px 10px 5px 12px lightblue;
+            border-radius: 40px;
+
+        }
+
+        #r1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 7%;
+        }
+
+        #row2 {
+            margin-top: -1%;
+            margin-left: 2%;
+        }
+
+        #r4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5%;
+        }
+
+        #r5 {
+            height: 45px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: -3%;
+            background: #3498db;
+        }
+
+        #p1 {
+            margin-left: 2%;
+
+            height: 66%;
+            margin-right: 2%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column-1,
+        .column-2,
+        .column-3,
+        .column-4 {
+            height: 453px;
+        }
+
+        .column-1 {
+            width: 30%;
+        }
+
+        .column-2 {
+            width: 10%;
+        }
+
+        .column-3 {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-top: 1%;
+        }
+
+        .column-4 {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 1%;
+        }
+
+        .column-4 h2 {
+            text-align: center;
+            margin: 0%;
+            display: flex;
+            height: 25%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .column-1,
+        .column-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .column-1 h2 {
+            margin: 8px;
+        }
+
+        .column-2 h2 {
+            margin: 8px;
+        }
+
+        #num {
+            text-align: center;
+        }
+
+        #btn {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="ajay()">
+    <div id="main">
+        <div id="r1">
+            <h1>DENOMINATION</h1>
+        </div>
+        <div id="row2">
+            <h2>Date: <span id="date"></span></h2>
+            <div id="r3">
+                <h2>Total Amount:<span id="h">0</span>
+                </h2>
+                <button id="btn" onclick="Myfn()">Delete</button>
+            </div>
+            <div id="r4">
+                <h3 id="">Six Thousand rupees only</h3>
+            </div>
+        </div>
+        <div id="r5">
+            <div id="r6" style="color: white;">
+                <h2 style="margin-top: 7%;">Currency</h2>
+            </div>
+            <div id="r7" style="color: white;">
+                <h2 style="margin-top: 7%;">Count</h2>
+            </div>
+            <div id="r8" style="color: white;">
+                <h2 style="margin-top: 7%;">Amount</h2>
+            </div>
+        </div>
+        <div id="p1">
+            <div class="column-1">
+                <h2 id="num">2000</h2>
+                <h2 id="num">500</h2>
+                <h2 id="num">200</h2>
+                <h2 id="num">100</h2>
+                <h2 id="num">50</h2>
+                <h2 id="num">20</h2>
+                <h2 id="num">10</h2>
+                <h2 id="num">5</h2>
+                <h2 id="num">2</h2>
+                <h2 id="num">1</h2>
+            </div>
+            <div class="column-2">
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+                <h2 id="xx">x</h2>
+            </div>
+            <div class="column-3">
+                <input type="text" name="" id="s1" onchange="Amith()">
+                <input type="text" name="" id="s2" onchange="Amith()">
+                <input type="text" name="" id="s3" onchange="Amith()">
+                <input type="text" name="" id="s4" onchange="Amith()">
+                <input type="text" name="" id="s5" onchange="Amith()">
+                <input type="text" name="" id="s6" onchange="Amith()">
+                <input type="text" name="" id="s7" onchange="Amith()">
+                <input type="text" name="" id="s8" onchange="Amith()">
+                <input type="text" name="" id="s9" onchange="Amith()">
+
+            </div>
+            <div class="column-4">
+                <h2 id="text1"></h2>
+                <h2 id="text2"></h2>
+                <h2 id="text3"></h2>
+                <h2 id="text4"></h2>
+                <h2 id="text5"></h2>
+                <h2 id="text6"></h2>
+                <h2 id="text7"></h2>
+                <h2 id="text8"></h2>
+                <h2 id="text9"></h2>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+    const d = new Date();
+    let text = d.toLocaleString();
+    document.getElementById("date").innerHTML = text;
+    function Amith() {
+        let ajay = document.getElementById("s1").value;
+        let pilki = 2000 * ajay;
+        document.getElementById("text1").innerHTML = pilki;
+
+        let aja = document.getElementById("s2").value;
+        let pilk = 500 * aja;
+        document.getElementById("text2").innerHTML = pilk;
+
+        let aja_1 = document.getElementById("s3").value;
+        let pilk_1 = 200 * aja_1;
+        document.getElementById("text3").innerHTML = pilk_1;
+
+
+        let aja_2 = document.getElementById("s4").value;
+        let pilk_2 = 100 * aja_2;
+        document.getElementById("text4").innerHTML = pilk_2;
+
+
+        let aja_3 = document.getElementById("s5").value;
+        let pilk_3 = 50 * aja_3;
+        document.getElementById("text5").innerHTML = pilk_3;
+
+
+        let aja_4 = document.getElementById("s6").value;
+        let pilk_4 = 10 * aja_4;
+        document.getElementById("text6").innerHTML = pilk_4;
+
+
+        let aja_5 = document.getElementById("s7").value;
+        let pilk_5 = 5 * aja_5;
+        document.getElementById("text7").innerHTML = pilk_5;
+
+
+        let aja_6 = document.getElementById("s8").value;
+        let pilk_6 = 2 * aja_6;
+        document.getElementById("text8").innerHTML = pilk_6;
+
+
+        let aja_7 = document.getElementById("s9").value;
+        let pilk_7 = 1 * aja_7;
+        document.getElementById("text9").innerHTML = pilk_7;
+
+        let total = (pilki + pilk + pilk_1 + pilk_2 + pilk_3 + pilk_4 + pilk_5 + pilk_6 + pilk_7);
+        let t = document.getElementById("h");
+        t.innerText = total;
+    }
+    function ajay() {
+        for (let i = 0; i < 10; i++) {
+            let a = document.getElementsByTagName("input")[i]
+            a.value = "";
+        }
+    }
+    function Myfn() {
+        document.getElementById("h").innerHTML="0";
+        for (let k = 0; k < 10; k++) {
+            document.getElementsByTagName("input")[k].value = ""
+            for (let l = 25; l < 34; l++) {
+                let j = document.getElementsByTagName("h2")[l]
+                j.innerHTML = "";
+            }
+        }
+        
+    }
+    
+
+
+</script>
+
+</html>

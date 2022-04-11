@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+           
+        }
+
+        #main {
+            height: 400px;
+            width: 450px;
+            border: 0.5px solid;
+            background-image: url(https://th.bing.com/th/id/R.e6e8bb1e55b2a267bef468abaa4a8641?rik=9IXom3xh8xUYUQ&riu=http%3a%2f%2fknownpeople.net%2fwp-content%2fuploads%2fp%2fpuneeth-rajkumar-wallpaper.jpg&ehk=7R6CD63lkTgWI9WplF0HWn%2fNiYDwircL%2fnh%2bJy9jcfY%3d&risl=&pid=ImgRaw&r=0);
+        }
+
+        #head {
+            margin-top: 2%;
+            margin-left: 1%;
+
+        }
+        #text {
+            height: 80px;
+            width: 434px;
+        }
+
+        #body {
+            margin-top: 2%;
+            justify-content: space-around;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        #body button {
+            width: 64px;
+            height: 50px;
+        }
+
+        #row1 {
+            width: 65%;
+            margin-left: 23px;
+
+        }
+
+        #body2 button {
+            width: 64px;
+            height: 50px;
+        }
+
+        #body2,
+        #body3,
+        #body4,
+        #body5 {
+            margin-top: 3%;
+        }
+
+        #btn-8,
+        #btn-5,
+        #btn-2,
+        #btn-3 {
+            margin-left: 16%;
+            margin-right: 15%;
+
+        }
+
+        #body3 button {
+            width: 64px;
+            height: 50px;
+        }
+
+        #body4 button {
+            width: 64px;
+            height: 50px;
+        }
+
+        #body5 button {
+            width: 64px;
+            height: 50px;
+        }
+
+        #r3 {
+            display: flex;
+            justify-content: end;
+            margin-right: 5%;
+            margin-top: -51%;
+        }
+
+        #r3 button {
+            width: 15%;
+            height: 230px;
+            background-color: aqua;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="head">
+            <input type="text" id="text" placeholder="Enter the Input" readonly="">
+        </div>
+        <div id="body">
+            <button id="" onclick="add('+')">+</button>
+            <button id="" onclick="add('-')">-</button>
+            <button id="" onclick="add('*')">*</button>
+            <button id="" onclick="add('/')">/</button>
+        </div>
+        <div id="nav">
+            <div id="row1">
+                <div id="body2">
+                    <button id="btn-7" onclick="add(7)">7</button>
+                    <button id="btn-8" onclick="add(8)">8</button>
+                    <button id="btn-9" onclick="add(9)">9</button>
+                </div>
+                <div id="body3">
+                    <button id="btn-4" onclick="add(4)">4</button>
+                    <button id="btn-5" onclick="add(5)">5</button>
+                    <button id="" onclick="add(6)">6</button>
+                </div>
+                <div id="body4">
+                    <button id="btn-1" onclick="add(1)">1</button>
+                    <button id="btn-2" onclick="add(2)">2</button>
+                    <button id="" onclick="add(3)">3</button>
+                </div>
+                <div id="body5">
+                    <button id="" onclick="add(0)">0</button>
+                    <button id="btn-3" onclick="add('.')">.</button>
+                    <button onclick="cls()">c</button>
+                </div>
+            </div>
+            <div id="r3">
+                <button onclick="exe()">=</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+let val=document.getElementById("text");
+function add(v){
+    val.value+=v;
+}
+function exe(){
+    val.value=eval(val.value)
+}
+function cls(){
+    val.value=""
+}
+</script>
+
+</html>

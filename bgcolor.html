@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+        }
+
+        #ammu {
+            margin-top: 24%;
+            margin-right: 9%;
+
+        }
+
+        #aja {
+            margin-top: 20%;
+        }
+
+        #aja {
+            margin-right: -95px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="aja" style="font-size: 2.5rem;">Color:<span id="color"></span></p>
+    <button type="button" id="ammu" style="height: 35px;width: 90px;">Click Me</button>
+
+</body>
+<script>
+    document.getElementById("ammu").addEventListener("click", ajay);
+    function ajay() {
+        const colors = ["green", "yellow", "lightblue", "pink", "red"]
+        const colorIndex = parseInt(Math.random() * colors.length)
+        document.getElementById("color").innerHTML = colors[colorIndex]
+        document.body.style.backgroundColor = colors[colorIndex];
+
+    }
+
+</script>
+
+</html>

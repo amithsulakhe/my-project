@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denomination</title>
+    <style>
+        #main {
+            width: 35%;
+            height: 690px;
+            border-radius: 1px;
+            margin-left: 33.5%;
+            margin-top: 1%;
+            box-shadow: 10px 10px 5px 12px lightblue;
+            border-radius: 40px;
+
+        }
+
+        #r1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 7%;
+        }
+
+        #row2 {
+            margin-top: -1%;
+            margin-left: 2%;
+        }
+
+        #r4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5%;
+        }
+
+        #r5 {
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -3%;
+            background: #3498db;
+        }
+
+        #p2,
+        #p3,
+        #p4,
+        #p5,
+        #p6,
+        #p7,
+        #p8,
+        #p9,
+        #c1,
+        #c2,
+        #c3,
+        #c4,
+        #c4 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #p3,
+        #p4,
+        #p5,
+        #p6,
+        #p7,
+        #p8,
+        #p9,
+        #c1,
+        #c2,
+        #c3,
+        #c4,
+        #c4 {
+            margin-top: -5%;
+        }
+
+        #pillu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #p1 {
+            margin-left: 2%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="r1">
+            <h1>DENOMINATION</h1>
+        </div>
+        <div id="row2">
+            <h2>Date: <span id="date"></span></h2>
+            <div id="r3">
+                <h2>Total Amount:</h2> <span></span>
+            </div>
+            <div id="r4">
+                <h3>Six Thousand rupees only</h3>
+            </div>
+        </div>
+        <div id="r5">
+            <div id="r6">
+                <h2 style="margin-top: 7%;">Currency</h2>
+            </div>
+            <div id="r7">
+                <h2 style="margin-top: 7%;">Count</h2>
+            </div>
+            <div id="r8">
+                <h2 style="margin-top: 7%;">Amount</h2>
+            </div>
+        </div>
+        <div id="p1">
+            <div id="p2">
+                <h2 style="margin-right: 19%;">2,000</h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="s1" style="height: 25px;margin-top: 3%;margin-left: -30%;" onchange="Amith()">
+                <h2 id="e1"></h2>
+
+            </div>
+            <div id="p3">
+                <h2 style="margin-right: 19%;">500 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="p4">
+                <h2 style="margin-right: 19%;">200 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2 ></h2>
+            </div>
+            <div id="p5">
+                <h2 style="margin-right: 19%;">100 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="p6">
+                <h2 style="margin-right: 19%;">50 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="p7">
+                <h2 style="margin-right: 19%;">20 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="p8">
+                <h2 style="margin-right: 19%;">10 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="p9">
+                <h2 style="margin-right: 19%;">5 </h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="c1">
+                <h2 style="margin-right: 19%;">2</h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;" >
+                <h2></h2>
+            </div>
+            <div id="c2">
+                <h2 style="margin-right: 19%;">1</h2>
+                <h3 style="margin-left: -30%;">X</h3>
+                <input type="text" name="" id="" style="height: 25px;margin-top: 3%;margin-left: -30%;">
+                <h2></h2>
+            </div>
+            <div id="pillu">
+                <h2 style="margin-top: -2%;font-size: 30px" ;>Thank You</h2>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+<script>
+  const d = new Date();
+let text = d.toLocaleString();
+document.getElementById("date").innerHTML = text;
+function Amith(){
+    let ajay=document.getElementById("s1").value;
+pilki=2000*ajay;
+document.getElementById("e1").innerHTML=pilki;
+}
+
+
+</script>
+
+</html>
